@@ -14,25 +14,32 @@
         <div>
             <form>
                 <label for="full-name">Full Name</label><br />
-                <input type="text" name="full-name" id="full-name" placeholder="What should we call you?"><br />
+                <input type="text" name="full-name" id="full-name" aria-label="Type your name" placeholder="What should we call you?"><br />
+                <div class="error_message"></div>
                 <label for="email">Email</label><br />
-                <input type="email" name="email" id="email" placeholder="example@something.com"><br />
+                <input type="email" name="email" id="email" aria-label="Type your e-mail" placeholder="example@something.com"><br />
+                <div class="error_message"></div>
                 <div class="password-container">
                     <label for="password">Enter Password</label><br />
-                    <input type="password" name="password" id="password" placeholder="xxxxxxxx">
+                    <input type="password" name="password" id="password" aria-label="Type your password" placeholder="xxxxxxxx">
                     <i class="fi fi-sr-eye toggle-password"></i><br />
                 </div>
+                <div class="error_message"></div>
                 <div class="password-container">
                     <label for="cpassword">Confirm Password</label><br />
-                    <input type="password" name="cpassword" id="cpassword" placeholder="xxxxxxxx">
+                    <input type="password" name="cpassword" id="cpassword" aria-label="Confirm your password" placeholder="xxxxxxxx">
                     <i class="fi fi-sr-eye toggle-password"></i><br />
                 </div>
-                <input type="submit" value="Update Profile"/>
+                <div class="error_message"></div>
+                <input type="submit" aria-label="Updata your profile" value="Update Profile"/>
             </form>
         </div>
         <div>
             <div class="align-center">
-                <div>Alguma coisa</div>
+                <div class="progress-circle">
+                    <div class="progress-circle-inner"></div>
+                    <span class="progress-text">65%</span>
+                </div>
                 <h3>Profile Completeness</h3>
             </div>
             <div>

@@ -5,7 +5,7 @@
     justify-content: center;
     border: 1px solid black;
     border-radius: 25px;
-    width: 500px;
+    width: 600px;
     margin: 10px auto;
 }
 
@@ -18,6 +18,9 @@
 }
 
 .align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -26,6 +29,7 @@ input {
     padding: 5px;
     border: 2px solid black;
     border-radius: 6px;
+    box-sizing: border-box;
 }
 
 .password-container {
@@ -34,15 +38,14 @@ input {
 }
 
 .password-container input {
-    /* align-items: center; */
-    width: 100%;
-    /* padding-right: 40px; */
-    box-sizing: border-box;
+    width: 84%;
+    padding-right: 40px;
+    
 }
 
 .password-container .toggle-password {
     position: absolute;
-    right: 10px;
+    right: 48px;
     top: 50%;
     border-left: 1px solid black;
     padding-left: 7px;
@@ -50,7 +53,7 @@ input {
 }
 
 input[type="submit"] {
-    width: 95%;
+    width: 80%;
     background-color: black;
     color: white;
     align-self: center;
@@ -62,7 +65,7 @@ input[type="submit"]:hover {
     background-color: rgb(50, 50, 50);
 }
 
-input:focus {
+input:focus:not(input[type="submit"]) {
     border-color: red;
     outline: none;
 }
@@ -92,4 +95,29 @@ input::placeholder {
 .main-container > div {
     margin: 10px;
     padding: 20px;
+}
+
+.progress-circle {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: conic-gradient(#000 65%, #ddd 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-circle-inner {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.progress-text {
+    position: absolute;
+    font-size: 24px;
+    color: #333;
 }
